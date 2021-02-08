@@ -1,0 +1,68 @@
+
+@bg-color: #cccccc;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font: bold 20px 'Courier'
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 360px;
+    height: 420px;
+    margin: 100px auto;
+    background-color: @bg-color;
+    border: 10px solid #000000;
+    border-radius: 20px;
+}
+
+.state {
+    position: relative;
+    width: 304px;
+    height: 304px;
+    border: 2px solid #000000;
+
+    .snake {
+        width: 100%;
+        height: 100%;
+        .snake-item {
+            position: absolute;
+            left: 40px;
+            top: 60px;
+            width: 10px;
+            height: 10px;
+            background-color: #000000;
+            border: 1px solid #cccccc;
+        }
+    }
+
+    .food {
+        position: absolute;
+        left: 30px;
+        top: 20px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #cccccc;
+        background-color: #000000;
+    }
+}
+
+.score-panel {
+    display: flex;
+    width: 304px;
+    justify-content: space-between;
+}
